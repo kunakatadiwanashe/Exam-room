@@ -1,8 +1,4 @@
-/* .footer-text {
-  position: absolute;
-  color: #9d9fa1;
-  
-} */
+
 
 
 
@@ -145,3 +141,4 @@ padding-top: 50px;;
       @apply rounded-md border border-black w-[31rem] h-11 focus:border-blue-500 focus:outline-none
     }
   }
+
