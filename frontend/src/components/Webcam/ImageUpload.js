@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Await } from 'react-router-dom';
 
 const ImageUpload = () => {
     
@@ -7,9 +8,24 @@ const ImageUpload = () => {
     const handleChange = (event) => {
         setFile(event.target.files[0]);
     };
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(file);
+
+        const formData = new FormData();
+        formData.append('image', file);
+
+        try{
+            const response = await fetch('https:', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error(error);
+        }
+
+        // console.log(file);
     };
 
     return (

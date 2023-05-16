@@ -18,10 +18,7 @@ function App() {
 
   return (
     <div className="App">
-         
       <ExamRoom />
-
-
     </div>
   );
 }
