@@ -1,18 +1,7 @@
-// import React from 'react';
-// import './App.css';
 
-// function ExamRoom() {
-//   return (
-//     <div className="ExamRoom">
-//       <h1>Exam Room</h1>
-//       <p>Welcome</p>
-//     </div>
-//   );
-// }
-
-// export default ExamRoom;
 
 import React, { useState } from "react";
+
 // import '/App.css';
 
 function ExamRoom() {
@@ -39,6 +28,7 @@ function ExamRoom() {
     <div className="relative h-screen">
       <div className="grid grid-cols-2 h-full">
         <div className="h-full flex flex-col pt-20 gap-40">
+          {/* <Link to="/" className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-400 font-semibold">Back</Link> */}
           <button className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-400 font-semibold">Back</button>
           <h1 className="text-blue-600 font-bold text-9xl ml-20">Exam Room</h1>
         </div>
