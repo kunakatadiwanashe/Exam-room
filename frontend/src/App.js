@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <ExamRoom />
-      {/* <button className="back-button">Back</button> */}
 
     </div>
   );
