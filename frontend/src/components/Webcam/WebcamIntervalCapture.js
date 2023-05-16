@@ -18,7 +18,7 @@ const WebcamIntervalCapture = () => {
 
  const captureFrame = async () => {
     const imageSrc = webcamRef.current.getScreenshot();
-// send to captured dat to backen
+// send to captured dat to backend
     const response = await fetch('http://localhost:4000/register', {
         method: 'POST',
         headers: {
