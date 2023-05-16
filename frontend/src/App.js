@@ -1,21 +1,28 @@
-import { Link } from "react-router-dom";
+import React from 'react';
 import './App.css';
-import Login from "./pages/auth/Login";
+import UploadModal from './components/UploadModal';
+import WebcamIntervalCapture from './components/Webcam/WebcamIntervalCapture';
+import WebcamVideo from './components/Webcam/WebcamVideo';
+import { WebcamePage } from "./components/Webcam/WebcamePage";
+
+
+
+
 
 function App() {
   return (
     <div className="App">
+       <>
+              {/* <WebcamePage /> */}
+
+           <UploadModal />
       
-      <div className="welcomePage">
+        {/* <WebcamIntervalCapture /> */}
 
-      <h1>ExamRoom.</h1>
-           <p>Lorem ipsum dolor sit amet, consectetur 
-                  adipiscing elit, sed do eiusmod 
-                 tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+       </>
 
-      </div>
-
+      
+          
     </div>
   );
 }
