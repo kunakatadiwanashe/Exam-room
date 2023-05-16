@@ -1,24 +1,144 @@
 
-.App{
-    height: 100vh;
-    display: flex;align-items: center;justify-content: center;
+
+
+
+.Exam-Room {
+  position: absolute;
+  color: #0061BB;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0px 200px;
+  
+  font-weight: 800;
+  line-height: 76.38px;
+  font-size: 40px;
+  
 }
 
-.welcomePage{
-    text-align: center;
+
+.back-button {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  background-color: grey;
+  color: black;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  font-size: medium;
+
 }
-.welcomePage h1{
-    font-family: 'SF Pro Display';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 76px;
-    color: #0061BB;
-   
+
+.back-button:hover {
+  background-color: #0061BB;
+  color: white;
 }
-.welcomePage p{
-    font-family: 'SF Pro Display';width: 70%;
-    font-style: normal;font-weight: 400;text-align: center;
-    font-size: 18px;line-height: 21px;margin: 0 auto;
-    text-align: center;color: #000000;
-} 
+
+.sign-in-form {
+position: absolute;
+right: 250px;
+top: 200px;
+cursor: pointer;
+  
+}
+
+/* #password {
+  display: flex;
+  box-sizing: border-box;
+  width: 494px;
+  height: 42px;
+  left: 992px;
+  top: 74px; 
+
+  border: 1px solid  #9d9fa1;
+  border-radius: 2px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  
+  
+} */
+
+/* 8:focus {
+  outline: 0.5px solid blue;
+} */
+
+
+
+
+.Form-footer {
+padding-top: 50px;;
+}
+
+
+
+
+.sign-up-button {
+  background-color: #0061BB;
+  color: white;
+  padding: 20px 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: medium;
+  line-height: 20px;
+  margin-top: 20px;
+  box-shadow: #96c2eb;
+  border-radius: 8px;
+  border: none;
+}
+
+.google-sign-in-button {
+  background-color:#f26262;
+  padding: 20px 50px;
+  border-radius: 8px;
+  font-size: medium;
+  font-weight: 600;
+  border: none;
+}
+
+
+.google-sign-in-button:hover {
+/* background-color: #e47f7f; */
+  color: white;
+}
+
+.apple-sign-in-button {
+  color: white;
+  background-color: black;
+  margin-left: 20px;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: medium;
+  font-weight: 600;
+
+}
+
+
+.apple-sign-in-button:hover {
+  /* background-color: #e47f7f; */
+    color: rgb(234, 248, 255);
+  }
+
+  .option {
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 30px
+  }
+
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer components {
+    .sign-up-inputs {
+      @apply rounded-md border border-black w-[31rem] h-11 focus:border-blue-500 focus:outline-none
+    }
+  }
+
