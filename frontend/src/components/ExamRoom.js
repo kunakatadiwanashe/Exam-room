@@ -1,6 +1,7 @@
 
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // import '/App.css';
 
@@ -25,12 +26,12 @@ function ExamRoom() {
   };
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-full">
       <div className="grid grid-cols-2 h-full">
         <div className="h-full flex flex-col pt-20 gap-40">
-          {/* <Link to="/" className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-400 font-semibold">Back</Link> */}
-          <button className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-400 font-semibold">Back</button>
-          <h1 className="text-blue-600 font-bold text-9xl ml-20">Exam Room</h1>
+          <Link to="/" className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-700 hover:text-white font-semibold flex justify-center items-center">Back</Link>
+          {/* <button className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-700 hover:text-white font-semibold">Back</button> */}
+          <h1 className="exam-room-big ml-20">Exam Room</h1>
         </div>
 
         <div className="h-full flex flex-col justify-center gap-3">
@@ -108,9 +109,6 @@ function ExamRoom() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-0 flex text-gray-500 left-40">
-        <p className="">Copyright (c) 2023 Optic Inc.AllRights Reserved.</p>
       </div>
     </div>
   );
