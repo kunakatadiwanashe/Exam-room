@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Home() {
   return (
     <div className="login-container h-full flex flex-col justify-center items-center gap-5 relative">
       <h1 className="exam-room-big">Exam Room</h1>
@@ -19,4 +19,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Home;

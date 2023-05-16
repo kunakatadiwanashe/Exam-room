@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import ExamRoom from "./components/ExamRoom";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
+import Home from "./components/Home";
 import UploadModal from './components/UploadModal';
 import WebcamIntervalCapture from './components/Webcam/WebcamIntervalCapture';
 import WebcamVideo from './components/Webcam/WebcamVideo';
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App relative h-screen ">
       <Routes className="flex grow">
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/exam" element={<ExamRoom />} />
       </Routes>
       <div className="absolute bottom-5 flex text-gray-500 w-full justify-center">
