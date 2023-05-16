@@ -1,4 +1,7 @@
-import React from 'react';
+
+import React, { useState } from 'react';
+import './App.css';
+import ExamRoom from './components/ExamRoom';
 import './App.css';
 import UploadModal from './components/UploadModal';
 import WebcamIntervalCapture from './components/Webcam/WebcamIntervalCapture';
@@ -9,20 +12,13 @@ import { WebcamePage } from "./components/Webcam/WebcamePage";
 
 
 
+
 function App() {
+  const [examRoomState] = useState({});
+
   return (
     <div className="App">
-       <>
-           <WebcamePage />
-
-           <UploadModal />
-      
-          <WebcamIntervalCapture />
-
-       </>
-
-      
-          
+      <ExamRoom />
     </div>
   );
 }
