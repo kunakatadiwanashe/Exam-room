@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App">
        <>
-              {/* <WebcamePage /> */}
+           <WebcamePage />
 
            <UploadModal />
       
-        {/* <WebcamIntervalCapture /> */}
+          <WebcamIntervalCapture />
 
        </>
 
