@@ -12,6 +12,9 @@ import Login from "./pages/auth/Login";
 import TakeExamPage from "./pages/TakeExamPage";
 import AccountSetting from "./pages/auth/AccountSetting"
 
+// import { auth, firestore } from "./firebase"; // Import Firebase auth and firestore
+
+
 
 
 
@@ -19,6 +22,8 @@ import AccountSetting from "./pages/auth/AccountSetting"
 
 function App() {
   const [examRoomState] = useState({});
+
+  
 
   return (
 
