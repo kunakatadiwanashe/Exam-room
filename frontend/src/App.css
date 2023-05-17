@@ -77,6 +77,19 @@ padding-top: 50px;;
 
 
 
+.sign-up-button {
+  background-color: #0061BB;
+  color: white;
+  padding: 20px 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: medium;
+  line-height: 20px;
+  margin-top: 20px;
+  box-shadow: #96c2eb;
+  border-radius: 8px;
+  border: none;
+}
 
 .Log-in {
   background-color: #0061BB;
@@ -91,6 +104,7 @@ padding-top: 50px;;
   border-radius: 8px;
   border: none;
 }
+
 
 .Log-in:hover {
   /* background-color: #e47f7f; */
