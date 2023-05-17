@@ -19,7 +19,7 @@ const WebcamIntervalCapture = () => {
  const captureFrame = async () => {
     const imageSrc = webcamRef.current.getScreenshot();
 // send to captured dat to backend
-    const response = await fetch('http://localhost:4000/register', {
+    const response = await fetch('', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -37,9 +37,10 @@ const WebcamIntervalCapture = () => {
 
 
 
+
   return (
-    <div>
-        <Webcam ref={webcamRef} mirrored={true} imageSmoothing={true}  />;
+    <div className='h-25 w-13'>
+        <Webcam ref={webcamRef} mirrored={true} imageSmoothing={true} className='object-contain h-full w-full' />
     </div>
   )
 }
