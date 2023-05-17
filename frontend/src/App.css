@@ -11,10 +11,12 @@
   height: 100vh;
   margin: 0;
   padding: 0px 200px;
-  
+  font-size: 64px;
   font-weight: 800;
   line-height: 76.38px;
-  font-size: 40px;
+  font-family: 'SF Pro Display', sans-serif;
+                                                
+  
   
 }
 
@@ -33,6 +35,10 @@
   font-weight: 600;
   font-size: medium;
 
+}
+.first-para{text-align: center;padding: 25px 0;font-size: 18px;font-weight: 400;}
+.front-btn{height: 7%; width:14%;display: flex;justify-content: center; align-items: center;font-family: 'SF Pro Display', sans-serif;font-weight: 700;
+font-size: 18px;
 }
 
 .back-button:hover {
@@ -81,8 +87,8 @@ padding-top: 50px;;
 .sign-up-button {
   background-color: #0061BB;
   color: white;
-  padding: 20px 50px;
-  font-family: 'Times New Roman', Times, serif;
+  padding: 17px 35px;
+  font-family: 'SF Pro Display', sans-serif;
   font-weight: 600;
   font-size: medium;
   line-height: 20px;
@@ -94,10 +100,11 @@ padding-top: 50px;;
 
 .google-sign-in-button {
   background-color:#f26262;
-  padding: 20px 50px;
+  font-family: 'SF Pro Display', sans-serif;
+  padding: 16px 40px;
   border-radius: 8px;
   font-size: medium;
-  font-weight: 600;
+  font-weight: 800;
   border: none;
 }
 
@@ -111,11 +118,12 @@ padding-top: 50px;;
   color: white;
   background-color: black;
   margin-left: 20px;
-  padding: 20px 50px;
+  padding: 16px 40px;
   border: none;
   border-radius: 8px;
   font-size: medium;
-  font-weight: 600;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight:800;
 
 }
 
@@ -126,9 +134,11 @@ padding-top: 50px;;
   }
 
   .option {
-    color: black;
+    color: #595555;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight:700;
     padding-top: 30px;
-    padding-bottom: 30px
+    padding-bottom: 30px;
   }
 
 
@@ -145,4 +155,14 @@ padding-top: 50px;;
       @apply text-blue-700 font-bold text-9xl
     }
   }
-
+  /* examroom */
+  .form-container input{
+  border: 2px solid #E1E1E1;height: 58px;
+ 
+  }
+  .form-container label{
+   font-size: 12px;
+   font-family: 'SF Pro Display', sans-serif;
+   font-weight: 900px;color: black;font-weight: bold;
+    }
+  

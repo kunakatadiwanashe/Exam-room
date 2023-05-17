@@ -31,16 +31,16 @@ function ExamRoom() {
         <div className="h-full flex flex-col pt-20 gap-40">
           <Link to="/" className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-700 hover:text-white font-semibold flex justify-center items-center">Back</Link>
           {/* <button className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-700 hover:text-white font-semibold">Back</button> */}
-          <h1 className="exam-room-big ml-20">Exam Room</h1>
+          <h1 className="exam-room-big ml-20">Exam Room.</h1>
         </div>
 
-        <div className="h-full flex flex-col justify-center gap-3">
+        <div className="form-container h-full flex flex-col justify-center gap-3">
           <div className="flex flex-col">
-            <label htmlFor="name">FullName:</label>
+            <label htmlFor="name">FullName</label>
 
             <input
               type="text"
-              placeholder="Name"
+              // placeholder="Name"
               id="name"
               name="name"
               value={name}
@@ -50,10 +50,10 @@ function ExamRoom() {
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
-              placeholder="Email"
+              // placeholder="Email"
               id="email"
               name="email"
               value={email}
@@ -63,10 +63,10 @@ function ExamRoom() {
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
-              placeholder="Password"
+              // placeholder="Password"
               id="password"
               name="password"
               value={password}
@@ -76,10 +76,10 @@ function ExamRoom() {
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="password">Verify Password:</label>
+            <label htmlFor="password">Verify Password</label>
             <input
               type="password"
-              placeholder="Verify Password"
+              // placeholder="Verify Password"
               id="password"
               name="password"
               value={password}
