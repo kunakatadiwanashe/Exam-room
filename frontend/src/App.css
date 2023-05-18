@@ -80,7 +80,7 @@ padding-top: 50px;;
 .sign-up-button {
   background-color: #0061BB;
   color: white;
-  padding: 10px 45px;
+  padding: 18px 40px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: medium;
@@ -94,7 +94,7 @@ padding-top: 50px;;
 .Log-in {
   background-color: #0061BB;
   color: white;
-  padding: 10px 45px;
+  padding: 18px 40px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: medium;
@@ -113,7 +113,7 @@ padding-top: 50px;;
 
 .google-sign-in-button {
   background-color:#f26262;
-  padding: 10px 45px;
+  padding: 18px 40px;
   border-radius: 8px;
   font-size: medium;
   font-weight: 600;
@@ -130,7 +130,7 @@ padding-top: 50px;;
   color: white;
   background-color: black;
   margin-left: 20px;
-  padding: 10px 45px;
+  padding: 18px 40px;
   border: none;
   border-radius: 8px;
   font-size: medium;
