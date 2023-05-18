@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-opticops-dev-172424-authRole",
+      "UnauthRoleArn": "arn:aws:iam::427488114379:role/amplify-opticops-dev-172424-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::427488114379:role/amplify-opticops-dev-172424-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-opticops-dev-172424-deployment",
+      "UnauthRoleName": "amplify-opticops-dev-172424-unauthRole",
+      "StackName": "amplify-opticops-dev-172424",
+      "StackId": "arn:aws:cloudformation:us-east-1:427488114379:stack/amplify-opticops-dev-172424/ed3bbad0-f4c6-11ed-ba0c-0ec96b3558fd",
+      "AmplifyAppId": "d186rcrtnvarg5"
+    },
+    "categories": {
+      "auth": {
+        "opticopsbee6d822": {}
+      }
+    }
+  }
+}
