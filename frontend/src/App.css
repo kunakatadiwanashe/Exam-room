@@ -83,7 +83,6 @@ padding-top: 50px;;
 
 
 
-
 .sign-up-button {
   background-color: #0061BB;
   color: white;
@@ -97,6 +96,26 @@ padding-top: 50px;;
   border-radius: 8px;
   border: none;
 }
+
+.Log-in {
+  background-color: #0061BB;
+  color: white;
+  padding: 20px 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: medium;
+  line-height: 20px;
+  margin-top: 20px;
+  box-shadow: #96c2eb;
+  border-radius: 8px;
+  border: none;
+}
+
+
+.Log-in:hover {
+  /* background-color: #e47f7f; */
+    color: rgb(214, 209, 209);
+  }
 
 .google-sign-in-button {
   background-color:#f26262;
@@ -128,10 +147,12 @@ padding-top: 50px;;
 }
 
 
+
+
 .apple-sign-in-button:hover {
   /* background-color: #e47f7f; */
-    color: rgb(234, 248, 255);
-  }
+  color: rgb(214, 209, 209);
+}
 
   .option {
     color: #595555;
@@ -153,6 +174,11 @@ padding-top: 50px;;
 
     .exam-room-big {
       @apply text-blue-700 font-bold text-9xl
+    }
+
+    .sign-in-inputs {
+      @apply rounded-md border border-black w-[31rem] h-11 focus:border-blue-700 focus:outline-none
+
     }
   }
   /* examroom */
