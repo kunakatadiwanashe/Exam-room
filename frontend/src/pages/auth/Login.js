@@ -8,14 +8,21 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  if (localStorage.getItem("authToken")) {
-    navigate("/takeexam");
-  }
+  // const checkAuth = () => {
+  //   try {
+  //     const session = Auth.currentSession();
+  //     if (session) {
+  //       navigate("/takeexam");
+  //     }
+  //   } catch {
+  //     setUsername("");
+  //   }
+  // }
+  // checkAuth();
 
   const handleSignIn = () => {
     Auth.signIn(username, password)
       .then(user => {
-        localStorage.setItem("authToken", user.signInUserSession.accessToken.jwtToken);
         navigate("/takeexam")
       })
       .catch(err => {

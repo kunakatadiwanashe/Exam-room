@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ExamRoom from "./components/ExamRoom";
 import { Routes, Route } from "react-router-dom";
@@ -14,6 +14,7 @@ import AccountSetting from "./pages/auth/AccountSetting";
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import { useNavigate } from "react-router-dom";
+import useUserStatus from "./utils/userstatus";
 
 Amplify.configure(awsconfig);
 Auth.configure(awsconfig);
@@ -21,11 +22,12 @@ Auth.configure(awsconfig);
 function App() {
   const navigate = useNavigate();
   const [examRoomState] = useState({});
-  if (!localStorage.getItem("authToken")) {
-    navigate("/login");
-  }
 
+  const userStatus = useUserStatus();
 
+  const isLoggedIn = (null !== userStatus);
+
+  if (!isLoggedIn) navigate("/login");
 
   return (
 
