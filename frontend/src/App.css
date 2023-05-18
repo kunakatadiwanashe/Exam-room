@@ -113,7 +113,7 @@ padding-top: 50px;;
 
 .google-sign-in-button {
   background-color:#f26262;
-  padding: 20px 50px;
+  padding: 10px 40px;
   border-radius: 8px;
   font-size: medium;
   font-weight: 600;
@@ -130,7 +130,7 @@ padding-top: 50px;;
   color: white;
   background-color: black;
   margin-left: 20px;
-  padding: 20px 50px;
+  padding: 10px 40px;
   border: none;
   border-radius: 8px;
   font-size: medium;
