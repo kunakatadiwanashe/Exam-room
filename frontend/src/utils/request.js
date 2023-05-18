@@ -16,7 +16,7 @@ Amplify.configure({
     endpoints: [
       {
         name: "apiGateway",
-        endpoint: settings.apiGateway,
+        endpoint: "https://lh0seoyr60.execute-api.us-east-1.amazonaws.com/Prod",
         region,
         custom_header: async () => {
           const session = await Auth.currentSession();

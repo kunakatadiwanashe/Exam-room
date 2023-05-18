@@ -1,6 +1,7 @@
 import React from "react";
 import StudentDetails from "../components/StudentDetails/StudentDetails";
 import Instructions from "../components/ExamInstructions/Instructions";
+import WebCameApp from "../components/Webcam/WebcamApp";
 import WebcamIntervalCapture from "../components/Webcam/WebcamIntervalCapture";
 
 const TakeExamPage = () => {
@@ -9,13 +10,14 @@ const TakeExamPage = () => {
     <div className="mainMain flex bg-black">
       {/* left sideBar */}
 
-      <div className="leftSideBar bg-[#202020]  w-1/4 h-[90vh] rounded-xl rounded-br mt-2 mb-2 ml-2">
+      <div className="leftSideBar bg-[#202020]  w-1/4 h-[100vh] rounded-xl rounded-br mt-2 mb-2 ml-2">
         <div className="studentsDetails bg-[#202020] h-40">
           <StudentDetails />
         </div>
-        <div className="bg-gray-700 h-[50%] border-blue-500 border-p-8 rounded-brss"></div>
+        <div className="bg-gray-700 h-[10%] border-blue-500 border-p-8 rounded-brss"></div>
         <div className="feed">
           <WebcamIntervalCapture />
+          <WebCameApp />
         </div>
       </div>
 
