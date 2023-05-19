@@ -21,7 +21,7 @@ const TakeExamPage = () => {
   const act = (results) => {
     setTestResults(results);
     results.forEach(element => {
-      if (element.TestName === "Person Detection" && Number(element.Details) > 0) {
+      if (element.TestName === "Person Detection" && Number(element.Details) > 1) {
         playAudio();
         setAlarm(true);
       } else {
