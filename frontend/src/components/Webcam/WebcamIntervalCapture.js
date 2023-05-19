@@ -2,62 +2,64 @@ import React, { useEffect, useRef, useState } from 'react'
 import Webcam from 'react-webcam';
 import gateway from "./../../utils/gateway";
 
+const WebcamIntervalCapture = ({ actOnResults }) => {
 
-const WebcamIntervalCapture = () => {
+    const webcamRef = useRef(null);
+    const [testResults, setTestResults] = useState([]);
+    const iterating = useRef(false);
 
- const webcamRef = useRef(null);
- const [testResults, setTestResults] = useState([]);
- const iterating = useRef(false);
-  
- useEffect (() => {
-    const interval = setInterval (() => {
-        getSnapshot();
-    }, 5000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            getSnapshot();
+        }, 5000);
 
-    return () => {
-        clearInterval (interval);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
+    const captureFrame = async () => {
+        const imageSrc = webcamRef.current.getScreenshot();
+        // send to captured dat to backend
+        const response = await fetch('', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ image: imageSrc })
+        });
+
+        if (!response.ok) {
+            console.error('failed to send data captured')
+        }
+        console.log(imageSrc);
     };
- }, []);
 
- const captureFrame = async () => {
-    const imageSrc = webcamRef.current.getScreenshot();
-// send to captured dat to backend
-    const response = await fetch('', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ image: imageSrc})
-    });
+    const getSnapshot = () => {
+        const image = webcamRef.current.getScreenshot();
+        const b64Encoded = image.split(",")[1];
 
-    if (!response.ok) {
-        console.error('failed to send data captured')
-    }
-    console.log(imageSrc);
- };
-
- const getSnapshot = () => {
-    const image = webcamRef.current.getScreenshot();
-    const b64Encoded = image.split(",")[1];
-
-    gateway.processImage(b64Encoded).then((response) => {
-      if (response) setTestResults(response);
-      if (iterating.current) setTimeout(getSnapshot, 300);
-      else setTestResults([]);
-    });
-  };
+        gateway.processImage(b64Encoded).then((response) => {
+            if (response) {
+                setTestResults(response);
+                actOnResults(response);
+            }
+            if (iterating.current) setTimeout(getSnapshot, 300);
+            else setTestResults([]);
+        });
+    };
 
 
 
 
 
 
-  return (
-    <div className='h-25 w-13 rounded-xl rounded-br'>
-        <Webcam ref={webcamRef} mirrored={true} imageSmoothing={true} 
-        className='object-contain h-full w-full rounded-xl rounded-br shadow-lg shadow-red-500 bg-white' />
-    </div>
-  )
+    return (
+        <div className='h-25 w-13 rounded-xl rounded-br'>
+            <Webcam ref={webcamRef} mirrored={true} imageSmoothing={true} screenshotFormat="image/jpeg"
+                className='object-contain h-full w-full rounded-xl rounded-br shadow-lg bg-white shadow-red-500' />
+        </div>
+    )
 }
 
 export default WebcamIntervalCapture
