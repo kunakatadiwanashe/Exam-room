@@ -1,0 +1,7 @@
+#topcam{
+    margin-bottom: 40px;border-radius: 20%;
+}
+
+.rightSideBar{
+display: flex;flex-direction: column;justify-content: space-evenly;
+}

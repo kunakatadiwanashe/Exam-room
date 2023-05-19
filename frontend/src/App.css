@@ -1,29 +1,46 @@
 
 
+/* .hero {background-image: linear-gradient(to right, #8F00FF 40%, #0075FF 50%) ,url('./components/Assets/Frame 50.png');
+
+  
+} */
+.hero {
+  height: 100vh;background-position: center;background-size: cover;
+  background:linear-gradient(180deg, rgba(151, 71, 255, 0.81) 0%, rgba(0, 97, 187, 0.72) 100%), url(./Assets//Frame.png);
+}
+.heading-one{font-size: 64px; font-family: 'SF Pro Display', sans-serif;font-weight: 700;color: white;}
+
+/* .hero{
+  background-image: linear-gradient(to right, #8F00FF 40%, #0075FF 50%), url('./components/Assets/Frame 50.png');
+} */
 
 
 .Exam-Room {
   position: absolute;
-  color: #0061BB;
+  color: white;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+ 
   margin: 0;
   padding: 0px 200px;
-  
+  font-size: 64px;
   font-weight: 800;
   line-height: 76.38px;
-  font-size: 40px;
+  font-family: 'SF Pro Display', sans-serif;
+                                                
+  
   
 }
+.exam-room-big{color: white;}
+first-para{font-family: 'SF Pro Display', sans-serif;font-size: 18px;font-weight: 400px;}
 
 
 .back-button {
   position: absolute;
   top: 80px;
   left: 100px;
-  background-color: grey;
+  background-color:#ECECEC;
   color: black;
   padding: 20px 50px;
   border: none;
@@ -33,6 +50,10 @@
   font-weight: 600;
   font-size: medium;
 
+}
+.first-para{text-align: center;padding-top: 10px;font-size: 18px;font-weight: 400;color: white;font-family: 'SF Pro Display', sans-serif;line-height: 1.3;padding-bottom: 50px;}
+.front-btn{height: 7%; width:14%;display: flex;justify-content: center; align-items: center;font-family: 'SF Pro Display', sans-serif;font-weight: 700;
+font-size: 18px;
 }
 
 .back-button:hover {
@@ -46,7 +67,9 @@ right: 250px;
 top: 200px;
 cursor: pointer;
   
+
 }
+.account{color: white;}
 
 /* #password {
   display: flex;
@@ -80,8 +103,8 @@ padding-top: 50px;;
 .sign-up-button {
   background-color: #0061BB;
   color: white;
-  padding: 18px 40px;
-  font-family: 'Times New Roman', Times, serif;
+  padding: 17px 35px;
+  font-family: 'SF Pro Display', sans-serif;
   font-weight: 600;
   font-size: medium;
   line-height: 20px;
@@ -94,7 +117,7 @@ padding-top: 50px;;
 .Log-in {
   background-color: #0061BB;
   color: white;
-  padding: 18px 40px;
+  padding: 20px 50px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: medium;
@@ -113,10 +136,11 @@ padding-top: 50px;;
 
 .google-sign-in-button {
   background-color:#f26262;
-  padding: 18px 40px;
+  font-family: 'SF Pro Display', sans-serif;
+  padding: 16px 40px;
   border-radius: 8px;
   font-size: medium;
-  font-weight: 600;
+  font-weight: 800;
   border: none;
 }
 
@@ -130,11 +154,12 @@ padding-top: 50px;;
   color: white;
   background-color: black;
   margin-left: 20px;
-  padding: 18px 40px;
+  padding: 16px 40px;
   border: none;
   border-radius: 8px;
   font-size: medium;
-  font-weight: 600;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight:800;
 
 }
 
@@ -147,9 +172,11 @@ padding-top: 50px;;
 }
 
   .option {
-    color: black;
+    color: #595555;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight:700;
     padding-top: 30px;
-    padding-bottom: 30px
+    padding-bottom: 30px;
   }
 
 
@@ -171,4 +198,28 @@ padding-top: 50px;;
 
     }
   }
+  /* examroom */
+  .form-container input{
+  border: 2px solid #E1E1E1;height: 58px;
+ 
+  }
+  .form-container label{
+   font-size: 12px;
+   font-family: 'SF Pro Display', sans-serif;
+   font-weight: 900px;color: black;font-weight: bold;
+    }
+
+
+    /* page2 */
+    /* .picture{position: relative;background-position: center center;
+      background-repeat: no-repeat;height: 100%;width: 85%;background-position: left center;
+    
+      background: linear-gradient(180deg, rgba(151, 71, 255, 0.81) 0%, rgba(0, 97, 187, 0.72) 100%), url(./Assets/pic2.jpeg);
+
+    } */
+    .para2{color: white;position: absolute;bottom: 10%;font-family: 'SF Pro Display', sans-serif;font-size: 24px;padding: 0 35px;}
+    .para3{color:#0061BB;font-weight: 700; font-family: 'SF Pro Display', sans-serif;font-size: 32px;
+      ;}
+  
+
 

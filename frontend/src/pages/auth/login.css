@@ -1,0 +1,12 @@
+
+#back{
+    position: relative;object-fit:contain;
+    height: 100%;width: 100%;background-size: contain;
+    background: linear-gradient(180deg, rgba(151, 71, 255, 0.81) 0%, rgba(0, 97, 187, 0.72) 100%), url(../../Assets/pic2.jpg);
+
+  }
+
+.examm{
+    position: absolute;bottom: 20px;z-index: 10;
+    padding: 0 40px 20px 20px;
+}
