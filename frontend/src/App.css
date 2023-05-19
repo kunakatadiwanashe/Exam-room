@@ -164,6 +164,13 @@ padding-top: 50px;;
 }
 
 
+/* Student Details */
+
+.details {
+  color: white;
+}
+
+
 
 
 .apple-sign-in-button:hover {
@@ -197,6 +204,7 @@ padding-top: 50px;;
       @apply rounded-md border border-black w-[31rem] h-11 focus:border-blue-700 focus:outline-none
 
     }
+    
   }
   /* examroom */
   .form-container input{
