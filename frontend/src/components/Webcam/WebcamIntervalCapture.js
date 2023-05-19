@@ -70,11 +70,14 @@ const WebcamIntervalCapture = () => {
     };
 
 
-    return (
-        <div className='h-25 w-13'>
-            <Webcam ref={setupWebcam} mirrored={true} imageSmoothing={true} className='object-contain h-full w-full' />
-        </div>
-    )
+
+  return (
+    <div className='h-25 w-13 rounded-xl rounded-br'>
+        <Webcam ref={webcamRef} mirrored={true} imageSmoothing={true} 
+        className='object-contain h-full w-full rounded-xl rounded-br shadow-lg shadow-red-500 bg-white' />
+    </div>
+  )
+
 }
 
 export default WebcamIntervalCapture
