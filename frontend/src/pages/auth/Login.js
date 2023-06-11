@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import useUserStatus from "./../../utils/userstatus";
 import './login.css';
 
-window.rekognitionSettings = { "apiGateway": "https://lh0seoyr60.execute-api.us-east-1.amazonaws.com/Prod/", "cognitoIdentityPool": "us-east-1:ac57aaa2-ebc3-4aed-8f56-5a35d80e7dce", "cognitoUserPoolId": "us-east-1_yEjrlOk1j", "cognitoUserPoolClientId": "5qmjvvadl1v50le7sc3vlb38v5", "region": "us-east-1" };
+window.rekognitionSettings = { "apiGateway": "https://6u7rkt4loe.execute-api.us-east-1.amazonaws.com/Prod/", "cognitoIdentityPool": "us-east-1:cdfd8fdd-c4a6-4f77-a608-67eb1a381d63", "cognitoUserPoolId": "us-east-1_OyevrYQ42", "cognitoUserPoolClientId": "2109mjnnhn04ep0kk30rltput6", "region": "us-east-1" };
+
 const settings = window.rekognitionSettings || {};
 const region = settings.region || "eu-west-1";
 
@@ -60,50 +61,52 @@ function Login() {
             <div className="h-full flex flex-col pt-20 gap-40" id="back">
               <Link to="/" className="bg-gray-300 w-24 h-10 rounded-md ml-10 hover:bg-blue-700 hover:text-white font-semibold flex justify-center items-center">Back</Link>
               <p className="examm">
-                ATCam Surveillance is a web-based platform used
-                to surveil and monitor any and every activity at your ATM.
-                ATCam connects with your ATM surveillance system and, while
-                recording footage, monitors everything in real-time so
-                you don't have to.
+                AI Exam Proctoring System
               </p>
             </div>
 
             <div className="h-full flex flex-col justify-center gap-3">
-
-
-              <div className="flex flex-col">
+              <div className="pl-8 flex flex-col">
                 <label htmlFor="username">Username:</label>
-                <input
-                  type="username"
-                  placeholder="Username"
-                  id="username"
-                  name="username"
-                  value={username}
-                  className="sign-in-inputs"
-                  onChange={(e) => setUsername(e.target.value)}
-                />
+                <div className="pt-2">
+                  <input
+                    type="username"
+                    placeholder="Username"
+                    id="username"
+                    name="username"
+                    value={username}
+                    className="sign-in-inputs"
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                  {username === "cassehari@gmail.com" && (
+                    <p className="text-red-500 pl-4">Incorrect username</p>
+                  )}
+                </div>
               </div>
 
-              <div className="flex flex-col">
-                <label htmlFor="password">Password:</label>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  id="password"
-                  name="password"
-                  value={password}
-                  className="sign-in-inputs"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+              <div className="pl-8 flex flex-col">
+                <label htmlFor="password">Password</label>
+                <div className="pt-2">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    id="password"
+                    name="password"
+                    value={password}
+                    className="sign-in-inputs"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  {password === "cassehari@gmail.com" && (
+                    <p className="text-red-500 pl-4">Incorrect password</p>
+                  )}
+                </div>
               </div>
 
-
-
-              <div>
+              <div className="pl-8">
                 <button className="Log-in" onClick={handleSignIn}>
                   Login
                 </button>
-                <div className="sign-in-options">
+                {/* <div className="sign-in-options">
                   <p className="option">continue with</p>
                   <button
                     className="google-sign-in-button "
@@ -117,7 +120,7 @@ function Login() {
                   >
                     Apple ID
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

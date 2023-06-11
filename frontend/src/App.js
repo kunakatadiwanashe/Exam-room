@@ -52,7 +52,7 @@ function App() {
         <Route path="/accountSetting" element={<AccountSetting />} />
       </Routes>
       <div className="absolute bottom-5 flex text-gray-500 w-full justify-center">
-        <p className="">Copyright (c) 2023 Optic Inc.AllRights Reserved.</p>
+        {/* <p className="">Copyright (c) 2023 Optic Inc.AllRights Reserved.</p> */}
       </div>
 
     </div>

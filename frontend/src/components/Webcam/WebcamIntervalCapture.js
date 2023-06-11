@@ -10,41 +10,27 @@ const WebcamIntervalCapture = ({ actOnResults }) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            getSnapshot();
-        }, 5000);
+
+            // getSnapshot();
+        }, 30000);
 
         return () => {
             clearInterval(interval);
         };
     }, []);
 
-    const captureFrame = async () => {
-        const imageSrc = webcamRef.current.getScreenshot();
-        // send to captured dat to backend
-        const response = await fetch('', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ image: imageSrc })
-        });
-
-        if (!response.ok) {
-            console.error('failed to send data captured')
-        }
-        console.log(imageSrc);
-    };
-
-    const getSnapshot = () => {
+    const getSnapshot = async () => {
+        //
         const image = webcamRef.current.getScreenshot();
         const b64Encoded = image.split(",")[1];
 
-        gateway.processImage(b64Encoded).then((response) => {
+        await gateway.processImage(b64Encoded).then((response) => {
             if (response) {
                 setTestResults(response);
                 actOnResults(response);
             }
-            if (iterating.current) setTimeout(getSnapshot, 300);
+
+            if (iterating.current) setTimeout(getSnapshot(), 300);
             else setTestResults([]);
         });
     };
@@ -57,7 +43,7 @@ const WebcamIntervalCapture = ({ actOnResults }) => {
     return (
         <div className='h-25 w-13 rounded-xl rounded-br'>
             <Webcam ref={webcamRef} mirrored={true} imageSmoothing={true} screenshotFormat="image/jpeg"
-                className='object-contain h-full w-full rounded-xl rounded-br shadow-lg bg-white shadow-red-500' />
+                className='object-contain h-full w-full rounded-xl rounded-br shadow-lg bg-white shadow-grey-500' />
         </div>
     )
 }

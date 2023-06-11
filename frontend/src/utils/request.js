@@ -1,7 +1,8 @@
 import Amplify, { API, Auth } from "aws-amplify";
 import { retryWrapper } from "./index";
 
-window.rekognitionSettings = { "apiGateway": "https://lh0seoyr60.execute-api.us-east-1.amazonaws.com/Prod/", "cognitoIdentityPool": "us-east-1:ac57aaa2-ebc3-4aed-8f56-5a35d80e7dce", "cognitoUserPoolId": "us-east-1_yEjrlOk1j", "cognitoUserPoolClientId": "5qmjvvadl1v50le7sc3vlb38v5", "region": "us-east-1" };
+window.rekognitionSettings = {"apiGateway":"https://6u7rkt4loe.execute-api.us-east-1.amazonaws.com/Prod/","cognitoIdentityPool":"us-east-1:cdfd8fdd-c4a6-4f77-a608-67eb1a381d63","cognitoUserPoolId":"us-east-1_OyevrYQ42","cognitoUserPoolClientId":"2109mjnnhn04ep0kk30rltput6","region":"us-east-1"};
+
 const settings = window.rekognitionSettings || {};
 const region = settings.region || "eu-west-1";
 
@@ -17,7 +18,7 @@ Amplify.configure({
     endpoints: [
       {
         name: "apiGateway",
-        endpoint: "https://lh0seoyr60.execute-api.us-east-1.amazonaws.com/Prod",
+        endpoint: "https://6u7rkt4loe.execute-api.us-east-1.amazonaws.com/Prod",
         region,
         custom_header: async () => {
           const session = await Auth.currentSession();
