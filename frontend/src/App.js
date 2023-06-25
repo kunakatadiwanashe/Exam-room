@@ -8,9 +8,10 @@ import WebcamIntervalCapture from './components/Webcam/WebcamIntervalCapture';
 import WebcamVideo from './components/Webcam/WebcamVideo';
 import { WebcamePage } from "./components/Webcam/WebcamePage";
 import Login from "./pages/auth/Login";
-
 import TakeExamPage from "./pages/TakeExamPage";
 import AccountSetting from "./pages/auth/AccountSetting";
+import YourTestsPage from "./pages/YourTestsPage";
+import TestDetailsPage from "./pages/TestDetailsPage";
 import Amplify, { Auth } from 'aws-amplify';
 // import awsconfig from './aws-exports';
 import { useNavigate } from "react-router-dom";
@@ -50,6 +51,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/takeexam" element={<TakeExamPage />} />
         <Route path="/accountSetting" element={<AccountSetting />} />
+        <Route path="/yourTestsPage" element={<YourTestsPage/>}/>
+        <Route path="/testDetails" element={<TestDetailsPage/>}/>
       </Routes>
       <div className="absolute bottom-5 flex text-gray-500 w-full justify-center">
         {/* <p className="">Copyright (c) 2023 Optic Inc.AllRights Reserved.</p> */}
